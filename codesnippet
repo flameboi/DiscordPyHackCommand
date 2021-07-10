@@ -1,0 +1,20 @@
+@client.event
+async def on_message(message):
+  if message.content.startswith('hackme'):  #you could replace 'hackme' to your choice
+    message = await message.reply(f"**\nHacking** {message.author.name}")
+    await asyncio.sleep(2)
+    await message.edit(content="Starting **Hacking** Process for: `"+message.author.name+"@discord.com`")
+    await asyncio.sleep(2)
+    await message.edit(content=f"Fetcing Credentials for: **{message.author.mention}**...")
+    await asyncio.sleep(3)
+    await message.edit(content="E-mail address found: `"+message.author.name+"@blacked.gaycommunity.member69.com`")
+    await asyncio.sleep(3)
+    await message.edit(content="Finding **password** to Discord Account...")
+    await asyncio.sleep(2)
+    await message.edit(content="Password found: `I@mNotGay!#`")
+    await asyncio.sleep(3)
+    await message.edit(content="Discord Account password found: `ItsYoPlayBoi("+message.author.name+")!"+message.author.discriminator+"`")
+    await asyncio.sleep(3)
+    await message.edit(content=f"The **hacking** process for {message.author.name} was Complete")
+    return
+    await client.process_commands(message)       
